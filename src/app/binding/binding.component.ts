@@ -14,9 +14,6 @@ export class BindingComponent implements OnInit {
 
   dinheiro = 10;
 
-  ValorAtualizado(novoValor){
-    console.log("será q to recebendo?", novoValor)
-  }
 
 
 
