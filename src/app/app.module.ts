@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { BindingComponent } from './binding/binding.component';
 import { ContadorComponent } from './contador/contador.component';
+import { DiretivasComponent } from './diretivas/diretivas.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ContadorComponent } from './contador/contador.component';
     FooterComponent,
     BindingComponent,
     ContadorComponent,
+    DiretivasComponent,
     
 
   ],

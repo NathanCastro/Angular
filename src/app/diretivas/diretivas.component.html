@@ -1,0 +1,50 @@
+<p>Valor atual: {{deveExibir}}</p>
+
+
+<button (click)="trocarValor()">Trocar o valor</button>
+
+
+<div *ngIf="deveExibir; else elseBlock">
+    Olá, estou usando ngIf
+</div>
+
+<ng-template #elseBlock>
+    Vou ser exibido qndo for FALSO
+</ng-template>
+
+<div *ngIf="soma(5,6) > 10">
+    Exibe soma
+</div>
+
+<br>
+<hr>
+
+<ng-template [ngIf]="deveExibir">
+    <div>Quando é verdadeiro</div>
+    <hr>
+</ng-template>
+
+<br>
+
+
+<div *ngIf="deveExibir; then thenBlock else elseBlock2"></div>
+<ng-template #thenBlock>BLOCO true.</ng-template>
+<ng-template #elseBlock2>BLOCO false.</ng-template>
+
+
+
+<br>
+<hr>
+
+
+<ul>
+    <li *ngFor="let fruta of listaFrutas">{{fruta}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let maquinas of listaCarros; let i = index">{{i + 3}} - {{maquinas.nome}} - {{maquinas.cor}} </li>
+</ul>
+
+
+
+<p *ngFor="let fruta of listaFrutas">{{fruta}}</p>
