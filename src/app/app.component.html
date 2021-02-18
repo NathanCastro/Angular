@@ -1,5 +1,13 @@
-<app-header></app-header>
+<app-header [time]="title"></app-header>
 
-<app-main></app-main>
+<app-binding 
+    [blue]="melao"
+    [carro]="garrafa"
+    (clickado)="eventoRecebido($event)">
+
+</app-binding>
+
+
+    
 
 <app-footer></app-footer>

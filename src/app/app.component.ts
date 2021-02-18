@@ -7,11 +7,21 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'Hello';
+  title = 'Seja Bem vindo';
+  
+  melao = "oiii!!"
+  garrafa = "Volkswagem"
+
+  
+
+    
+  constructor(){    
+  }
+
+  eventoRecebido($event){
+    console.log('AppComponent: Evento recebido', $event)
+  }
 
   
   
-  constructor(){
-    
-  }
 }
