@@ -1,0 +1,66 @@
+<!--Exercicio COntador-->
+<app-contador 
+[valor] = "dinheiro" 
+(valorMudou)="ValorAtualizado($event)">
+</app-contador>
+<!--Event binding-->
+<br>
+<hr>
+<br>
+<h1>Event Binding</h1>
+
+<button 
+    (click)="clicouNiMim($event)">
+    Pra Clicar
+</button><br><br><br>
+
+
+
+
+
+
+
+
+<button 
+    (mouseenter)="passouOMouse($event)">
+    Clique em mim
+</button><br><br><br>
+
+
+<input type="text"  
+    [value]= "ValorDoInput" 
+    (keyup)="digitouAlgo($event)" 
+><br>
+
+Valor do Input: {{ValorDoInput}}
+
+
+
+
+<!--Property binding-->
+<br>
+<br>
+<hr>
+<br>
+<br>
+<h2>Palavra: {{blue}}</h2>
+<h3>Palavra: {{carro}}</h3>
+
+
+
+
+
+<input type="text"  [value]= "initialValue" >
+<br>
+
+
+
+<button [disabled] = "isDisabled">Clique aqui</button>
+
+
+<br>
+
+
+<p [attr.aria-label]="isDisabled ? 'Botão desabilitado' : accessibilityText"> um texto estudado</p>
+<br>
+<img [src]="imageURL">
