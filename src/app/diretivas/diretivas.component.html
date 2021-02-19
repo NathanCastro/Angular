@@ -1,5 +1,5 @@
 <p>Valor atual: {{deveExibir}}</p>
-
+<!--
 
 <button (click)="trocarValor()">Trocar o valor</button>
 
@@ -46,5 +46,17 @@
 </ul>
 
 
+-->
 
-<p *ngFor="let fruta of listaFrutas">{{fruta}}</p>
+
+
+<ul>
+    <li *ngFor="let memesAgrupados of  MEMES_AGRUPADOS_POR_CATEGORIA">
+        {{memesAgrupados .categoria}} 
+
+        <div *ngFor="let meme of memesAgrupados.memes; let par = even">
+            <img [src]= " PREFIXO_URL + meme.imagemURL" *ngIf="par">
+            <h2 *ngIf="!par"> PAR</h2>
+        </div>
+    </li>
+</ul>

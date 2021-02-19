@@ -1,0 +1,13 @@
+<p>exercicio-ng-class works!</p>
+
+<button (click)="tornarVerde()">Mudando a cor</button>
+<p [ngClass]="deveSer ? 'vermelho' : 'verde'">Olá, tudo bom com vc?</p>
+<hr>
+<br>
+
+<p [class]="deveSer ? 'verde':'vermelho'">testanod propertuBinding class</p>
+<hr>
+<br>
+<p [class.verde]="deveSer">
+    olá de novo
+</p>
