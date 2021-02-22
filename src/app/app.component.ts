@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Seja Bem vindo';
   
   melao = "oiii!!"
@@ -22,6 +22,11 @@ export class AppComponent {
     console.log('AppComponent: Evento recebido', $event)
   }
 
+  ngOnInit(){
+    setTimeout(() => {
+      this.title = 'olá novinhas'
+    },3000)
+  }
   
   
 }
