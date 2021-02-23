@@ -1,16 +1,21 @@
-import { NgModule } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BindingComponent } from './binding/binding.component';
-import { ContadorComponent } from './contador/contador.component';
-import { DiretivasComponent } from './diretivas/diretivas.component';
-import { ExercicioNgClassComponent } from './exercicio-ng-class/exercicio-ng-class.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
+import { BindingComponent } from './share/componentes/binding/binding.component';
+import { ContadorComponent } from './share/componentes/contador/contador.component';
+import { DiretivasComponent } from './share/componentes/diretivas/diretivas.component';
+import { ExercicioNgClassComponent } from './share/componentes/exercicio-ng-class/exercicio-ng-class.component';
+import { ExerciciosPipesComponent } from './share/componentes/exercicios-pipes/exercicios-pipes.component';
+import { FooterComponent } from './share/componentes/footer/footer.component';
+import { HeaderComponent } from './share/componentes/header/header.component';
 
+
+registerLocaleData(localePt, 'pt-BR');
 
 @NgModule({
   declarations: [
@@ -22,6 +27,7 @@ import { MainComponent } from './main/main.component';
     ContadorComponent,
     DiretivasComponent,
     ExercicioNgClassComponent,
+    ExerciciosPipesComponent,
     
 
   ],
@@ -29,7 +35,15 @@ import { MainComponent } from './main/main.component';
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [{
+    provide:  LOCALE_ID,
+    useValue: 'pt-BR'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+
+
+

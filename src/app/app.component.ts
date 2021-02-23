@@ -23,9 +23,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(){
-    setTimeout(() => {
-      this.title = 'olá novinhas'
-    },3000)
+    /*setTimeout(() => {
+      this.title = 'olá novinhas';
+    },3000)*/
   }
   
   
