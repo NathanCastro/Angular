@@ -15,6 +15,7 @@ import { FooterComponent } from './share/componentes/footer/footer.component';
 import { HeaderComponent } from './share/componentes/header/header.component';
 import { LoginComponent } from './login/login.component';
 import { ExtratoComponent } from './extrato/extrato.component';
+import { NaoEncontradoComponent } from './nao-encontrado/nao-encontrado.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -31,6 +32,7 @@ registerLocaleData(localePt, 'pt');
     ExerciciosPipesComponent,
     LoginComponent,
     ExtratoComponent,
+    NaoEncontradoComponent,
     
 
   ],

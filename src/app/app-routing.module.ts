@@ -4,10 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { ExtratoComponent } from './extrato/extrato.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
+import { NaoEncontradoComponent } from './nao-encontrado/nao-encontrado.component';
 
 
 const routes: Routes =[{
-    path: '',
+    path: 'main',
     component: MainComponent
 },{
     path:'login',
@@ -15,6 +16,13 @@ const routes: Routes =[{
 },{
     path:'extrato',
     component:ExtratoComponent,
+},{
+    path:'',
+    redirectTo:'main',
+    pathMatch:'full',
+}, {
+    path:'**',
+    component: NaoEncontradoComponent,
 }];
 
 @NgModule({
