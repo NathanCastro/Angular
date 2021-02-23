@@ -13,9 +13,10 @@ import { ExercicioNgClassComponent } from './share/componentes/exercicio-ng-clas
 import { ExerciciosPipesComponent } from './share/componentes/exercicios-pipes/exercicios-pipes.component';
 import { FooterComponent } from './share/componentes/footer/footer.component';
 import { HeaderComponent } from './share/componentes/header/header.component';
+import { LoginComponent } from './login/login.component';
+import { ExtratoComponent } from './extrato/extrato.component';
 
-
-registerLocaleData(localePt, 'pt-BR');
+registerLocaleData(localePt, 'pt');
 
 @NgModule({
   declarations: [
@@ -28,6 +29,8 @@ registerLocaleData(localePt, 'pt-BR');
     DiretivasComponent,
     ExercicioNgClassComponent,
     ExerciciosPipesComponent,
+    LoginComponent,
+    ExtratoComponent,
     
 
   ],
@@ -37,7 +40,7 @@ registerLocaleData(localePt, 'pt-BR');
   ],
   providers: [{
     provide:  LOCALE_ID,
-    useValue: 'pt-BR'
+    useValue: 'pt'
   }],
   bootstrap: [AppComponent]
 })
